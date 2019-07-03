@@ -1,0 +1,39 @@
+-------------------------------------------------------------------------------
+Test set: raul.reactive.streams.publisher.SimplePublisherTest
+-------------------------------------------------------------------------------
+Tests run: 38, Failures: 10, Errors: 0, Skipped: 14, Time elapsed: 9.45 s <<< FAILURE! - in raul.reactive.streams.publisher.SimplePublisherTest
+required_createPublisher1MustProduceAStreamOfExactly1Element(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.117 s  <<< FAILURE!
+java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+
+required_createPublisher3MustProduceAStreamOfExactly3Elements(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.107 s  <<< FAILURE!
+java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1a482e36 produced only 1 element expected:<true> but was:<false>
+
+required_spec101_subscriptionRequestMustResultInTheCorrectNumberOfProducedElements(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.314 s  <<< FAILURE!
+java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+Caused by: java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+
+required_spec102_maySignalLessThanRequestedAndTerminateSubscription(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.106 s  <<< FAILURE!
+java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+
+required_spec105_mustSignalOnCompleteWhenFiniteStreamTerminates(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.106 s  <<< FAILURE!
+java.lang.AssertionError: Did not receive expected element within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element within 100 ms
+
+required_spec107_mustNotEmitFurtherSignalsOnceOnCompleteHasBeenSignalled(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.208 s  <<< FAILURE!
+java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+
+required_spec303_mustNotAllowUnboundedRecursion(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.104 s  <<< FAILURE!
+java.lang.AssertionError: Unable to validate call stack depth safety, awaited at-most 2 signals (`maxOnNextSignalsInRecursionTest()`) or completion within 100 ms
+
+required_spec317_mustSupportACumulativePendingElementCountUpToLongMaxValue(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.103 s  <<< FAILURE!
+java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+
+required_spec317_mustSupportAPendingElementCountUpToLongMaxValue(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 0.107 s  <<< FAILURE!
+java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+
+stochastic_spec103_mustSignalOnMethodsSequentially(raul.reactive.streams.publisher.SimplePublisherTest)  Time elapsed: 1.009 s  <<< FAILURE!
+java.lang.AssertionError: Failed in iteration 0 of 100. Expected completion signal after signalling 10 elements (signalled 1), yet did not receive it within 1000 ms
+

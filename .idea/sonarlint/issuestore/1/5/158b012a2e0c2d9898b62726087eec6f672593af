@@ -1,0 +1,9 @@
+
+T
+squid:S106"9Replace this use of System.out or System.err by a logger.(òÙÏ¦ıÿÿÿÿ
+¤squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¸ÜÒÄøÿÿÿÿ8±ï½š»-
+Ÿsquid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×İŠÎ8±ï½š»-
+[
+squid:S106"9Replace this use of System.out or System.err by a logger.(Êßÿüÿÿÿÿ8˜åµš»-
+Nsquid:S1068"0Remove this unused "subscription" private field.(í¡ÌÀ8 Ôê¶»-
+ysquid:S1450"[Remove the "subscription" field and declare it as a local variable in the relevant methods.(í¡ÌÀ8 Ôê¶»-

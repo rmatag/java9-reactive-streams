@@ -1,0 +1,1528 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>14/10/14</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Jul 02 19:13:00 CEST 2019</td>
+</tr>
+<tr><td>Total time:</td><td>4 seconds (4126 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_createPublisher1MustProduceAStreamOfExactly1Element()'><b>required_createPublisher1MustProduceAStreamOfExactly1Element</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.expectCompletion(TestEnvironment.java:1000)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.expectCompletion(TestEnvironment.java:511)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestEndOfStream(TestEnvironment.java:425)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestEndOfStream(TestEnvironment.java:412)
+	at org.reactivestreams.tck.PublisherVerification$1.run(PublisherVerification.java:167)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_createPublisher1MustProduceAStreamOfExactly1Element(PublisherVerification.java:162)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1448061896", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1448061896'><pre>java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.expectCompletion(TestEnvironment.java:1000)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.expectCompletion(TestEnvironment.java:511)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestEndOfStream(TestEnvironment.java:425)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestEndOfStream(TestEnvironment.java:412)
+	at org.reactivestreams.tck.PublisherVerification$1.run(PublisherVerification.java:167)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_createPublisher1MustProduceAStreamOfExactly1Element(PublisherVerification.java:162)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_createPublisher3MustProduceAStreamOfExactly3Elements()'><b>required_createPublisher3MustProduceAStreamOfExactly3Elements</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1a482e36 produced only 1 element expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.reactivestreams.tck.PublisherVerification$2.run(PublisherVerification.java:184)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_createPublisher3MustProduceAStreamOfExactly3Elements(PublisherVerification.java:179)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1922464006", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1922464006'><pre>java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1a482e36 produced only 1 element expected:&lt;true&gt; but was:&lt;false&gt;
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.testng.Assert.failNotEquals(Assert.java:480)
+	at org.testng.Assert.assertTrue(Assert.java:37)
+	at org.reactivestreams.tck.PublisherVerification$2.run(PublisherVerification.java:184)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_createPublisher3MustProduceAStreamOfExactly3Elements(PublisherVerification.java:179)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec101_subscriptionRequestMustResultInTheCorrectNumberOfProducedElements()'><b>required_spec101_subscriptionRequestMustResultInTheCorrectNumberOfProducedElements</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.PublisherVerification$3.run(PublisherVerification.java:224)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec101_subscriptionRequestMustResultInTheCorrectNumberOfProducedElements(PublisherVerification.java:211)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 36 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1827725498", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1827725498'><pre>java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+	at org.testng.Assert.fail(Assert.java:78)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.PublisherVerification$3.run(PublisherVerification.java:224)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec101_subscriptionRequestMustResultInTheCorrectNumberOfProducedElements(PublisherVerification.java:211)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 36 more
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec102_maySignalLessThanRequestedAndTerminateSubscription()'><b>required_spec102_maySignalLessThanRequestedAndTerminateSubscription</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:472)
+	at org.reactivestreams.tck.PublisherVerification$4.run(PublisherVerification.java:244)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec102_maySignalLessThanRequestedAndTerminateSubscription(PublisherVerification.java:239)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 37 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace258931371", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace258931371'><pre>java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:78)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:472)
+	at org.reactivestreams.tck.PublisherVerification$4.run(PublisherVerification.java:244)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec102_maySignalLessThanRequestedAndTerminateSubscription(PublisherVerification.java:239)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 37 more
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec105_mustSignalOnCompleteWhenFiniteStreamTerminates()'><b>required_spec105_mustSignalOnCompleteWhenFiniteStreamTerminates</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Did not receive expected element within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElement(TestEnvironment.java:456)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestNextElement(TestEnvironment.java:391)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestNextElement(TestEnvironment.java:382)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestNextElement(TestEnvironment.java:378)
+	at org.reactivestreams.tck.PublisherVerification$7.run(PublisherVerification.java:402)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec105_mustSignalOnCompleteWhenFiniteStreamTerminates(PublisherVerification.java:397)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 38 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1438030319", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1438030319'><pre>java.lang.AssertionError: Did not receive expected element within 100 ms
+	at org.testng.Assert.fail(Assert.java:78)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElement(TestEnvironment.java:456)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestNextElement(TestEnvironment.java:391)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestNextElement(TestEnvironment.java:382)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.requestNextElement(TestEnvironment.java:378)
+	at org.reactivestreams.tck.PublisherVerification$7.run(PublisherVerification.java:402)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec105_mustSignalOnCompleteWhenFiniteStreamTerminates(PublisherVerification.java:397)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 38 more
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec107_mustNotEmitFurtherSignalsOnceOnCompleteHasBeenSignalled()'><b>required_spec107_mustNotEmitFurtherSignalsOnceOnCompleteHasBeenSignalled</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.expectCompletion(TestEnvironment.java:1000)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.expectCompletion(TestEnvironment.java:511)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.expectCompletion(TestEnvironment.java:499)
+	at org.reactivestreams.tck.PublisherVerification$9.run(PublisherVerification.java:436)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec107_mustNotEmitFurtherSignalsOnceOnCompleteHasBeenSignalled(PublisherVerification.java:430)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace825936265", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace825936265'><pre>java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.expectCompletion(TestEnvironment.java:1000)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.expectCompletion(TestEnvironment.java:511)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.expectCompletion(TestEnvironment.java:499)
+	at org.reactivestreams.tck.PublisherVerification$9.run(PublisherVerification.java:436)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec107_mustNotEmitFurtherSignalsOnceOnCompleteHasBeenSignalled(PublisherVerification.java:430)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec303_mustNotAllowUnboundedRecursion()'><b>required_spec303_mustNotAllowUnboundedRecursion</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Unable to validate call stack depth safety, awaited at-most 2 signals (`maxOnNextSignalsInRecursionTest()`) or completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Latch.expectClose(TestEnvironment.java:852)
+	at org.reactivestreams.tck.PublisherVerification$19.run(PublisherVerification.java:819)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec303_mustNotAllowUnboundedRecursion(PublisherVerification.java:752)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace60292059", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace60292059'><pre>java.lang.AssertionError: Unable to validate call stack depth safety, awaited at-most 2 signals (`maxOnNextSignalsInRecursionTest()`) or completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Latch.expectClose(TestEnvironment.java:852)
+	at org.reactivestreams.tck.PublisherVerification$19.run(PublisherVerification.java:819)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec303_mustNotAllowUnboundedRecursion(PublisherVerification.java:752)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec317_mustSupportACumulativePendingElementCountUpToLongMaxValue()'><b>required_spec317_mustSupportACumulativePendingElementCountUpToLongMaxValue</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:472)
+	at org.reactivestreams.tck.PublisherVerification$29.run(PublisherVerification.java:1061)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec317_mustSupportACumulativePendingElementCountUpToLongMaxValue(PublisherVerification.java:1053)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 37 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2110756088", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2110756088'><pre>java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:78)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:472)
+	at org.reactivestreams.tck.PublisherVerification$29.run(PublisherVerification.java:1061)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec317_mustSupportACumulativePendingElementCountUpToLongMaxValue(PublisherVerification.java:1053)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 37 more
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec317_mustSupportAPendingElementCountUpToLongMaxValue()'><b>required_spec317_mustSupportAPendingElementCountUpToLongMaxValue</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:472)
+	at org.reactivestreams.tck.PublisherVerification$28.run(PublisherVerification.java:1041)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec317_mustSupportAPendingElementCountUpToLongMaxValue(PublisherVerification.java:1035)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 37 more
+... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace257513673", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace257513673'><pre>java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:78)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:232)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.next(TestEnvironment.java:959)
+	at org.reactivestreams.tck.TestEnvironment$Receptacle.nextN(TestEnvironment.java:988)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:484)
+	at org.reactivestreams.tck.TestEnvironment$ManualSubscriber.nextElements(TestEnvironment.java:472)
+	at org.reactivestreams.tck.PublisherVerification$28.run(PublisherVerification.java:1041)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification.required_spec317_mustSupportAPendingElementCountUpToLongMaxValue(PublisherVerification.java:1035)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flopAndFail(TestEnvironment.java:229)
+	... 37 more
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.stochastic_spec103_mustSignalOnMethodsSequentially()'><b>stochastic_spec103_mustSignalOnMethodsSequentially</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>java.lang.AssertionError: Failed in iteration 0 of 100. Expected completion signal after signalling 10 elements (signalled 1), yet did not receive it within 1000 ms
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Latch.expectClose(TestEnvironment.java:852)
+	at org.reactivestreams.tck.PublisherVerification$5$1.run(PublisherVerification.java:347)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification$5.apply(PublisherVerification.java:258)
+	at org.reactivestreams.tck.PublisherVerification$5.apply(PublisherVerification.java:255)
+	at org.reactivestreams.tck.PublisherVerification.stochasticTest(PublisherVerification.java:1207)
+	at org.reactivestreams.tck.PublisherVerification.stochastic_spec103_mustSignalOnMethodsSequentially(PublisherVerification.java:255)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace366873404", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace366873404'><pre>java.lang.AssertionError: Failed in iteration 0 of 100. Expected completion signal after signalling 10 elements (signalled 1), yet did not receive it within 1000 ms
+	at org.testng.Assert.fail(Assert.java:89)
+	at org.reactivestreams.tck.TestEnvironment.flop(TestEnvironment.java:169)
+	at org.reactivestreams.tck.TestEnvironment$Latch.expectClose(TestEnvironment.java:852)
+	at org.reactivestreams.tck.PublisherVerification$5$1.run(PublisherVerification.java:347)
+	at org.reactivestreams.tck.PublisherVerification.activePublisherTest(PublisherVerification.java:1138)
+	at org.reactivestreams.tck.PublisherVerification$5.apply(PublisherVerification.java:258)
+	at org.reactivestreams.tck.PublisherVerification$5.apply(PublisherVerification.java:255)
+	at org.reactivestreams.tck.PublisherVerification.stochasticTest(PublisherVerification.java:1207)
+	at org.reactivestreams.tck.PublisherVerification.stochastic_spec103_mustSignalOnMethodsSequentially(PublisherVerification.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>1</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec105_emptyStreamMustTerminateBySignallingOnComplete()'><b>optional_spec105_emptyStreamMustTerminateBySignallingOnComplete</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec111_maySupportMultiSubscribe()'><b>optional_spec111_maySupportMultiSubscribe</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec109_mustIssueOnSubscribeForNonNullSubscriber()'><b>required_spec109_mustIssueOnSubscribeForNonNullSubscriber</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec109_subscribeThrowNPEOnNullSubscriber()'><b>required_spec109_subscribeThrowNPEOnNullSubscriber</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec302_mustAllowSynchronousRequestCallsFromOnNextAndOnSubscribe()'><b>required_spec302_mustAllowSynchronousRequestCallsFromOnNextAndOnSubscribe</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec306_afterSubscriptionIsCancelledRequestMustBeNops()'><b>required_spec306_afterSubscriptionIsCancelledRequestMustBeNops</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec307_afterSubscriptionIsCancelledAdditionalCancelationsMustBeNops()'><b>required_spec307_afterSubscriptionIsCancelledAdditionalCancelationsMustBeNops</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec309_requestNegativeNumberMustSignalIllegalArgumentException()'><b>required_spec309_requestNegativeNumberMustSignalIllegalArgumentException</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec309_requestZeroMustSignalIllegalArgumentException()'><b>required_spec309_requestZeroMustSignalIllegalArgumentException</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec312_cancelMustMakeThePublisherToEventuallyStopSignaling()'><b>required_spec312_cancelMustMakeThePublisherToEventuallyStopSignaling</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec313_cancelMustMakeThePublisherEventuallyDropAllReferencesToTheSubscriber()'><b>required_spec313_cancelMustMakeThePublisherEventuallyDropAllReferencesToTheSubscriber</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec317_mustNotSignalOnErrorWhenPendingAboveLongMaxValue()'><b>required_spec317_mustNotSignalOnErrorWhenPendingAboveLongMaxValue</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_validate_boundedDepthOfOnNextAndRequestRecursion()'><b>required_validate_boundedDepthOfOnNextAndRequestRecursion</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_validate_maxElementsFromPublisher()'><b>required_validate_maxElementsFromPublisher</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec104_mustSignalOnErrorWhenFails()'><b>optional_spec104_mustSignalOnErrorWhenFails</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Skipping because no error state Publisher provided, and the test requires it. Please implement PublisherVerification#createFailedPublisher to run this test.
+	at org.reactivestreams.tck.PublisherVerification.potentiallyPendingTest(PublisherVerification.java:1193)
+	at org.reactivestreams.tck.PublisherVerification.whenHasErrorPublisherTest(PublisherVerification.java:1182)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec104_mustSignalOnErrorWhenFails(PublisherVerification.java:361)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace388357135", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace388357135'><pre>org.testng.SkipException: Skipping because no error state Publisher provided, and the test requires it. Please implement PublisherVerification#createFailedPublisher to run this test.
+	at org.reactivestreams.tck.PublisherVerification.potentiallyPendingTest(PublisherVerification.java:1193)
+	at org.reactivestreams.tck.PublisherVerification.whenHasErrorPublisherTest(PublisherVerification.java:1182)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec104_mustSignalOnErrorWhenFails(PublisherVerification.java:361)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront()'><b>optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront(PublisherVerification.java:654)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1327006586", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1327006586'><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront(PublisherVerification.java:654)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfrontAndCompleteAsExpected()'><b>optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfrontAndCompleteAsExpected</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfrontAndCompleteAsExpected(PublisherVerification.java:686)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace78204644", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace78204644'><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected element or completion within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfrontAndCompleteAsExpected(PublisherVerification.java:686)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingOneByOne()'><b>optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingOneByOne</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1aa7ecca did not produce the requested 2 elements on 2nd subscriber within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingOneByOne(PublisherVerification.java:604)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace106374177", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace106374177'><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1aa7ecca did not produce the requested 2 elements on 2nd subscriber within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingOneByOne(PublisherVerification.java:604)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec111_registeredSubscribersMustReceiveOnNextOrOnCompleteSignals()'><b>optional_spec111_registeredSubscribersMustReceiveOnNextOrOnCompleteSignals</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected stream completion within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_registeredSubscribersMustReceiveOnNextOrOnCompleteSignals(PublisherVerification.java:577)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1793436274", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1793436274'><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected stream completion within 100 ms
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1167)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec111_registeredSubscribersMustReceiveOnNextOrOnCompleteSignals(PublisherVerification.java:577)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.optional_spec309_requestNegativeNumberMaySignalIllegalArgumentExceptionWithSpecificMessage()'><b>optional_spec309_requestNegativeNumberMaySignalIllegalArgumentExceptionWithSpecificMessage</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1165)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec309_requestNegativeNumberMaySignalIllegalArgumentExceptionWithSpecificMessage(PublisherVerification.java:920)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace952562199", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace952562199'><pre>org.testng.SkipException: Skipped because tested publisher does NOT implement this OPTIONAL requirement.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1226)
+	at org.reactivestreams.tck.PublisherVerification.optionalActivePublisherTest(PublisherVerification.java:1165)
+	at org.reactivestreams.tck.PublisherVerification.optional_spec309_requestNegativeNumberMaySignalIllegalArgumentExceptionWithSpecificMessage(PublisherVerification.java:920)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.required_spec109_mayRejectCallsToSubscribeIfPublisherIsUnableOrUnwillingToServeThemRejectionMustTriggerOnErrorAfterOnSubscribe()'><b>required_spec109_mayRejectCallsToSubscribeIfPublisherIsUnableOrUnwillingToServeThemRejectionMustTriggerOnErrorAfterOnSubscribe</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Skipping because no error state Publisher provided, and the test requires it. Please implement PublisherVerification#createFailedPublisher to run this test.
+	at org.reactivestreams.tck.PublisherVerification.potentiallyPendingTest(PublisherVerification.java:1193)
+	at org.reactivestreams.tck.PublisherVerification.whenHasErrorPublisherTest(PublisherVerification.java:1182)
+	at org.reactivestreams.tck.PublisherVerification.required_spec109_mayRejectCallsToSubscribeIfPublisherIsUnableOrUnwillingToServeThemRejectionMustTriggerOnErrorAfterOnSubscribe(PublisherVerification.java:520)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace825249556", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace825249556'><pre>org.testng.SkipException: Skipping because no error state Publisher provided, and the test requires it. Please implement PublisherVerification#createFailedPublisher to run this test.
+	at org.reactivestreams.tck.PublisherVerification.potentiallyPendingTest(PublisherVerification.java:1193)
+	at org.reactivestreams.tck.PublisherVerification.whenHasErrorPublisherTest(PublisherVerification.java:1182)
+	at org.reactivestreams.tck.PublisherVerification.required_spec109_mayRejectCallsToSubscribeIfPublisherIsUnableOrUnwillingToServeThemRejectionMustTriggerOnErrorAfterOnSubscribe(PublisherVerification.java:520)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.untested_spec106_mustConsiderSubscriptionCancelledAfterOnErrorOrOnCompleteHasBeenCalled()'><b>untested_spec106_mustConsiderSubscriptionCancelledAfterOnErrorOrOnCompleteHasBeenCalled</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec106_mustConsiderSubscriptionCancelledAfterOnErrorOrOnCompleteHasBeenCalled(PublisherVerification.java:425)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace945288723", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace945288723'><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec106_mustConsiderSubscriptionCancelledAfterOnErrorOrOnCompleteHasBeenCalled(PublisherVerification.java:425)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.untested_spec107_mustNotEmitFurtherSignalsOnceOnErrorHasBeenSignalled()'><b>untested_spec107_mustNotEmitFurtherSignalsOnceOnErrorHasBeenSignalled</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec107_mustNotEmitFurtherSignalsOnceOnErrorHasBeenSignalled(PublisherVerification.java:446)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2087258327", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2087258327'><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec107_mustNotEmitFurtherSignalsOnceOnErrorHasBeenSignalled(PublisherVerification.java:446)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.untested_spec108_possiblyCanceledSubscriptionShouldNotReceiveOnErrorOrOnCompleteSignals()'><b>untested_spec108_possiblyCanceledSubscriptionShouldNotReceiveOnErrorOrOnCompleteSignals</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec108_possiblyCanceledSubscriptionShouldNotReceiveOnErrorOrOnCompleteSignals(PublisherVerification.java:451)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1006094903", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1006094903'><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec108_possiblyCanceledSubscriptionShouldNotReceiveOnErrorOrOnCompleteSignals(PublisherVerification.java:451)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.untested_spec109_subscribeShouldNotThrowNonFatalThrowable()'><b>untested_spec109_subscribeShouldNotThrowNonFatalThrowable</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec109_subscribeShouldNotThrowNonFatalThrowable(PublisherVerification.java:456)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1293680848", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1293680848'><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec109_subscribeShouldNotThrowNonFatalThrowable(PublisherVerification.java:456)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.untested_spec110_rejectASubscriptionRequestIfTheSameSubscriberSubscribesTwice()'><b>untested_spec110_rejectASubscriptionRequestIfTheSameSubscriberSubscribesTwice</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec110_rejectASubscriptionRequestIfTheSameSubscriberSubscribesTwice(PublisherVerification.java:550)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1309176095", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1309176095'><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec110_rejectASubscriptionRequestIfTheSameSubscriberSubscribesTwice(PublisherVerification.java:550)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.untested_spec304_requestShouldNotPerformHeavyComputations()'><b>untested_spec304_requestShouldNotPerformHeavyComputations</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec304_requestShouldNotPerformHeavyComputations(PublisherVerification.java:832)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace645482568", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace645482568'><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec304_requestShouldNotPerformHeavyComputations(PublisherVerification.java:832)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+<tr>
+<td title='raul.reactive.streams.publisher.SimplePublisherTest.untested_spec305_cancelMustNotSynchronouslyPerformHeavyComputation()'><b>untested_spec305_cancelMustNotSynchronouslyPerformHeavyComputation</b><br>Test class: raul.reactive.streams.publisher.SimplePublisherTest</td>
+<td><div><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec305_cancelMustNotSynchronouslyPerformHeavyComputation(PublisherVerification.java:837)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1026055550", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1026055550'><pre>org.testng.SkipException: Not verified by this TCK.
+	at org.reactivestreams.tck.PublisherVerification.notVerified(PublisherVerification.java:1212)
+	at org.reactivestreams.tck.PublisherVerification.untested_spec305_cancelMustNotSynchronouslyPerformHeavyComputation(PublisherVerification.java:837)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:74)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:673)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:846)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1170)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:1147)
+	at org.testng.TestRunner.privateRun(TestRunner.java:749)
+	at org.testng.TestRunner.run(TestRunner.java:600)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:317)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:274)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:223)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1039)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:964)
+	at org.testng.TestNG.run(TestNG.java:900)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:135)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeSingleClass(TestNGDirectoryTestSuite.java:112)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:99)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:146)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
+</pre></div></td>
+<td>0</td>
+<td>raul.reactive.streams.publisher.SimplePublisherTest@778d1062</td></tr>
+</table><p>
+</body>
+</html>

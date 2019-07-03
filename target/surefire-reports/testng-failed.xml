@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="false" name="Failed suite [Surefire suite]" verbose="0">
+  <test name="Surefire test(failed)" preserve-order="false">
+    <classes>
+      <class name="raul.reactive.streams.publisher.SimplePublisherTest">
+        <methods>
+          <include name="optional_spec309_requestNegativeNumberMaySignalIllegalArgumentExceptionWithSpecificMessage"/>
+          <include name="required_createPublisher1MustProduceAStreamOfExactly1Element"/>
+          <include name="untested_spec106_mustConsiderSubscriptionCancelledAfterOnErrorOrOnCompleteHasBeenCalled"/>
+          <include name="optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfrontAndCompleteAsExpected"/>
+          <include name="setUp"/>
+          <include name="optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingOneByOne"/>
+          <include name="optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront"/>
+          <include name="untested_spec110_rejectASubscriptionRequestIfTheSameSubscriberSubscribesTwice"/>
+          <include name="required_spec105_mustSignalOnCompleteWhenFiniteStreamTerminates"/>
+          <include name="untested_spec107_mustNotEmitFurtherSignalsOnceOnErrorHasBeenSignalled"/>
+          <include name="required_spec317_mustSupportAPendingElementCountUpToLongMaxValue"/>
+          <include name="untested_spec108_possiblyCanceledSubscriptionShouldNotReceiveOnErrorOrOnCompleteSignals"/>
+          <include name="required_spec102_maySignalLessThanRequestedAndTerminateSubscription"/>
+          <include name="untested_spec304_requestShouldNotPerformHeavyComputations"/>
+          <include name="required_spec317_mustSupportACumulativePendingElementCountUpToLongMaxValue"/>
+          <include name="untested_spec109_subscribeShouldNotThrowNonFatalThrowable"/>
+          <include name="optional_spec104_mustSignalOnErrorWhenFails"/>
+          <include name="stochastic_spec103_mustSignalOnMethodsSequentially"/>
+          <include name="untested_spec305_cancelMustNotSynchronouslyPerformHeavyComputation"/>
+          <include name="optional_spec111_registeredSubscribersMustReceiveOnNextOrOnCompleteSignals"/>
+          <include name="required_createPublisher3MustProduceAStreamOfExactly3Elements"/>
+          <include name="required_spec101_subscriptionRequestMustResultInTheCorrectNumberOfProducedElements"/>
+          <include name="required_spec107_mustNotEmitFurtherSignalsOnceOnCompleteHasBeenSignalled"/>
+          <include name="required_spec109_mayRejectCallsToSubscribeIfPublisherIsUnableOrUnwillingToServeThemRejectionMustTriggerOnErrorAfterOnSubscribe"/>
+          <include name="required_spec303_mustNotAllowUnboundedRecursion"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

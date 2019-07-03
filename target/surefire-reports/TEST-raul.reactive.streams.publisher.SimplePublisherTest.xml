@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="raul.reactive.streams.publisher.SimplePublisherTest" time="9.45" tests="38" errors="0" skipped="14" failures="10">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="9"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/rur/java9reactivestreams/target/test-classes:/Users/rur/java9reactivestreams/target/classes:/Users/rur/work/repo/org/reactivestreams/reactive-streams-tck-flow/1.0.2/reactive-streams-tck-flow-1.0.2.jar:/Users/rur/work/repo/org/testng/testng/5.14.10/testng-5.14.10.jar:/Users/rur/work/repo/junit/junit/3.8.1/junit-3.8.1.jar:/Users/rur/work/repo/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar:/Users/rur/work/repo/com/beust/jcommander/1.12/jcommander-1.12.jar:/Users/rur/work/repo/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams-tck/1.0.2/reactive-streams-tck-1.0.2.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams-examples/1.0.2/reactive-streams-examples-1.0.2.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams-flow-adapters/1.0.2/reactive-streams-flow-adapters-1.0.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="http://java.oracle.com/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="9"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="ES"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/rur/java9reactivestreams/target/surefire/surefirebooter3570616520823456241.jar /Users/rur/java9reactivestreams/target/surefire 2019-07-02T19-13-00_174-jvmRun1 surefire3048126203982396152tmp surefire_011072376966592801981tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/rur/java9reactivestreams/target/test-classes:/Users/rur/java9reactivestreams/target/classes:/Users/rur/work/repo/org/reactivestreams/reactive-streams-tck-flow/1.0.2/reactive-streams-tck-flow-1.0.2.jar:/Users/rur/work/repo/org/testng/testng/5.14.10/testng-5.14.10.jar:/Users/rur/work/repo/junit/junit/3.8.1/junit-3.8.1.jar:/Users/rur/work/repo/org/beanshell/bsh/2.0b4/bsh-2.0b4.jar:/Users/rur/work/repo/com/beust/jcommander/1.12/jcommander-1.12.jar:/Users/rur/work/repo/org/yaml/snakeyaml/1.6/snakeyaml-1.6.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams-tck/1.0.2/reactive-streams-tck-1.0.2.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams/1.0.2/reactive-streams-1.0.2.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams-examples/1.0.2/reactive-streams-examples-1.0.2.jar:/Users/rur/work/repo/org/reactivestreams/reactive-streams-flow-adapters/1.0.2/reactive-streams-flow-adapters-1.0.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/rur"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/rur/java9reactivestreams"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/rur/java9reactivestreams/target/surefire/surefirebooter3570616520823456241.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="9.0.4+11"/>
+    <property name="user.name" value="rur"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="10.14.5"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="/Users/rur/work/repo"/>
+    <property name="java.vendor.url.bug" value="http://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/var/folders/yq/y3430pvs7m9cvxy95cr9v7_r0000gn/T/"/>
+    <property name="java.version" value="9.0.4"/>
+    <property name="user.dir" value="/Users/rur/java9reactivestreams"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/rur/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="9.0.4+11"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="53.0"/>
+  </properties>
+  <testcase name="optional_spec104_mustSignalOnErrorWhenFails" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Skipping because no error state Publisher provided, and the test requires it. Please implement PublisherVerification#createFailedPublisher to run this test."/>
+  </testcase>
+  <testcase name="optional_spec105_emptyStreamMustTerminateBySignallingOnComplete" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.114"/>
+  <testcase name="optional_spec111_maySupportMultiSubscribe" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.103"/>
+  <testcase name="optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfront" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected element or completion within 100 ms"/>
+  </testcase>
+  <testcase name="optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingManyUpfrontAndCompleteAsExpected" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected element or completion within 100 ms"/>
+  </testcase>
+  <testcase name="optional_spec111_multicast_mustProduceTheSameElementsInTheSameSequenceToAllOfItsSubscribersWhenRequestingOneByOne" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1aa7ecca did not produce the requested 2 elements on 2nd subscriber within 100 ms"/>
+  </testcase>
+  <testcase name="optional_spec111_registeredSubscribersMustReceiveOnNextOrOnCompleteSignals" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Skipped because tested publisher does NOT implement this OPTIONAL requirement. Reason for skipping was: Did not receive expected stream completion within 100 ms"/>
+  </testcase>
+  <testcase name="optional_spec309_requestNegativeNumberMaySignalIllegalArgumentExceptionWithSpecificMessage" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Skipped because tested publisher does NOT implement this OPTIONAL requirement."/>
+  </testcase>
+  <testcase name="required_createPublisher1MustProduceAStreamOfExactly1Element" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.117">
+    <failure message="Did not receive expected stream completion within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_createPublisher3MustProduceAStreamOfExactly3Elements" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.107">
+    <failure message="Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1a482e36 produced only 1 element expected:&lt;true&gt; but was:&lt;false&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@1a482e36 produced only 1 element expected:<true> but was:<false>
+]]></failure>
+  </testcase>
+  <testcase name="required_spec101_subscriptionRequestMustResultInTheCorrectNumberOfProducedElements" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.314">
+    <failure message="Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+Caused by: java.lang.AssertionError: Publisher org.reactivestreams.FlowAdapters$ReactivePublisherFromFlow@4f83df68 produced less than 3 elements after two respective `request` calls within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_spec102_maySignalLessThanRequestedAndTerminateSubscription" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.106">
+    <failure message="Did not receive expected element or completion within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_spec105_mustSignalOnCompleteWhenFiniteStreamTerminates" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.106">
+    <failure message="Did not receive expected element within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Did not receive expected element within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_spec107_mustNotEmitFurtherSignalsOnceOnCompleteHasBeenSignalled" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.208">
+    <failure message="Did not receive expected stream completion within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Did not receive expected stream completion within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_spec109_mayRejectCallsToSubscribeIfPublisherIsUnableOrUnwillingToServeThemRejectionMustTriggerOnErrorAfterOnSubscribe" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Skipping because no error state Publisher provided, and the test requires it. Please implement PublisherVerification#createFailedPublisher to run this test."/>
+  </testcase>
+  <testcase name="required_spec109_mustIssueOnSubscribeForNonNullSubscriber" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0"/>
+  <testcase name="required_spec109_subscribeThrowNPEOnNullSubscriber" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.001"/>
+  <testcase name="required_spec302_mustAllowSynchronousRequestCallsFromOnNextAndOnSubscribe" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.104"/>
+  <testcase name="required_spec303_mustNotAllowUnboundedRecursion" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.104">
+    <failure message="Unable to validate call stack depth safety, awaited at-most 2 signals (`maxOnNextSignalsInRecursionTest()`) or completion within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Unable to validate call stack depth safety, awaited at-most 2 signals (`maxOnNextSignalsInRecursionTest()`) or completion within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_spec306_afterSubscriptionIsCancelledRequestMustBeNops" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.104"/>
+  <testcase name="required_spec307_afterSubscriptionIsCancelledAdditionalCancelationsMustBeNops" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.107"/>
+  <testcase name="required_spec309_requestNegativeNumberMustSignalIllegalArgumentException" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.104"/>
+  <testcase name="required_spec309_requestZeroMustSignalIllegalArgumentException" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.105"/>
+  <testcase name="required_spec312_cancelMustMakeThePublisherToEventuallyStopSignaling" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.107"/>
+  <testcase name="required_spec313_cancelMustMakeThePublisherEventuallyDropAllReferencesToTheSubscriber" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.328"/>
+  <testcase name="required_spec317_mustNotSignalOnErrorWhenPendingAboveLongMaxValue" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.103"/>
+  <testcase name="required_spec317_mustSupportACumulativePendingElementCountUpToLongMaxValue" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.103">
+    <failure message="Did not receive expected element or completion within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_spec317_mustSupportAPendingElementCountUpToLongMaxValue" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0.107">
+    <failure message="Did not receive expected element or completion within 100 ms" type="java.lang.AssertionError">java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+Caused by: java.lang.AssertionError: Did not receive expected element or completion within 100 ms
+</failure>
+  </testcase>
+  <testcase name="required_validate_boundedDepthOfOnNextAndRequestRecursion" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0"/>
+  <testcase name="required_validate_maxElementsFromPublisher" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0"/>
+  <testcase name="stochastic_spec103_mustSignalOnMethodsSequentially" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="1.009">
+    <failure message="Failed in iteration 0 of 100. Expected completion signal after signalling 10 elements (signalled 1), yet did not receive it within 1000 ms" type="java.lang.AssertionError">java.lang.AssertionError: Failed in iteration 0 of 100. Expected completion signal after signalling 10 elements (signalled 1), yet did not receive it within 1000 ms
+</failure>
+  </testcase>
+  <testcase name="untested_spec106_mustConsiderSubscriptionCancelledAfterOnErrorOrOnCompleteHasBeenCalled" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Not verified by this TCK."/>
+  </testcase>
+  <testcase name="untested_spec107_mustNotEmitFurtherSignalsOnceOnErrorHasBeenSignalled" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Not verified by this TCK."/>
+  </testcase>
+  <testcase name="untested_spec108_possiblyCanceledSubscriptionShouldNotReceiveOnErrorOrOnCompleteSignals" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Not verified by this TCK."/>
+  </testcase>
+  <testcase name="untested_spec109_subscribeShouldNotThrowNonFatalThrowable" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Not verified by this TCK."/>
+  </testcase>
+  <testcase name="untested_spec110_rejectASubscriptionRequestIfTheSameSubscriberSubscribesTwice" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Not verified by this TCK."/>
+  </testcase>
+  <testcase name="untested_spec304_requestShouldNotPerformHeavyComputations" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Not verified by this TCK."/>
+  </testcase>
+  <testcase name="untested_spec305_cancelMustNotSynchronouslyPerformHeavyComputation" classname="raul.reactive.streams.publisher.SimplePublisherTest" time="0">
+    <skipped message="Not verified by this TCK."/>
+  </testcase>
+</testsuite>
